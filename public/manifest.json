@@ -1,0 +1,18 @@
+{
+  "short_name": "ProDone",
+  "name": "ProDone - Digital Innovation Experts",
+  "description": "Modern Digital ProDone specializing in Web Development, Mobile Apps, and AI Integration",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23ef4444;stop-opacity:1' /><stop offset='100%' style='stop-color:%23dc2626;stop-opacity:1' /></linearGradient></defs><rect width='192' height='192' rx='48' fill='url(%23grad)' stroke='%23f87171' stroke-width='3'/><g fill='white'><path d='M36 36h72c19.8 0 36 16.2 36 36s-16.2 36-36 36h-48v60h-24V36zm24 24h48c6.6 0 12 5.4 12 12s-5.4 12-12 12H60V60z'/><circle cx='156' cy='48' r='15' opacity='0.9'/><line x1='24' y1='132' x2='168' y2='132' stroke='white' stroke-width='7.2' opacity='0.4'/><line x1='24' y1='156' x2='132' y2='156' stroke='white' stroke-width='7.2' opacity='0.4'/></g></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ef4444",
+  "background_color": "#0a0a0a",
+  "orientation": "portrait-primary"
+}
