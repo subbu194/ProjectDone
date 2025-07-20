@@ -1,0 +1,15 @@
+<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="prodone-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ef4444" />
+      <stop offset="1" stop-color="#f87171" />
+    </linearGradient>
+  </defs>
+  <rect width="40" height="40" rx="10" fill="url(#prodone-gradient)"/>
+  <g>
+    <path d="M10 10h14c3.3 0 6 2.7 6 6s-2.7 6-6 6h-10v10h-4V10zm4 4h10c1.1 0 2 .9 2 2s-.9 2-2 2h-10v-4z" fill="white"/>
+    <circle cx="30" cy="12" r="2.5" fill="white" opacity="0.9"/>
+    <line x1="8" y1="28" x2="32" y2="28" stroke="white" stroke-width="1.2" opacity="0.4"/>
+    <line x1="8" y1="32" x2="26" y2="32" stroke="white" stroke-width="1.2" opacity="0.4"/>
+  </g>
+</svg> 

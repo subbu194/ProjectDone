@@ -5,9 +5,9 @@ import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import FloatingContact from '../components/FloatingContact';
 import LeadMagnetModal from '../components/LeadMagnetModal';
 import Testimonials from '../components/Testimonials';
+import LiveChat from '../components/LiveChat';
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         <Contact />
       </div>
       <Footer />
-      <FloatingContact />
+      <LiveChat />
     </div>
   );
 } 
