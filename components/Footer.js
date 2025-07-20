@@ -43,7 +43,7 @@ const Footer = () => {
 
   const contactInfo = [
     { icon: Mail, text: 'yourprodone@gmail.com', href: 'mailto:yourprodone@gmail.com' },
-    { icon: Phone, text: '+19 96636 14603', href: 'tel:+199663614603' },
+    { icon: Phone, text: '+91 96636 14603', href: 'tel:+919663614603' },
 
   ];
 
