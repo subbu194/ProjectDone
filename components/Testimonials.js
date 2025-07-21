@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
@@ -26,25 +26,17 @@ const Testimonials = () => {
     },
     {
       id: 3,
-      name: 'CutTheQ Team',
-      title: 'Leadership Team, CutTheQ',
-      quote: "ProDone revolutionized our restaurant operations with their innovative queue management system. Before working with them, our customers were frustrated with long wait times. Now, they can order ahead and skip the queue entirely. The platform's real-time tracking and seamless payment integration have not only improved customer satisfaction but also increased our order volume by 30%. Their understanding of the food service industry and ability to deliver user-friendly solutions made all the difference.",
-    },
-    {
-      id: 4,
       name: 'Kaushik Dutta',
       title: 'Founder & CEO, Klinic',
       quote: "ProDone's development of our telemedicine platform has been a game-changer for healthcare delivery. They built a secure, HIPAA-compliant system that our doctors and patients love to use. The platform's ease of use and robust security features have helped us expand our services to reach more patients. Their healthcare technology expertise and attention to compliance requirements gave us confidence from day one. They've been instrumental in our mission to make quality healthcare accessible to everyone.",
     },
+    {
+      id: 4,
+      name: 'Nithish Raja',
+      title: 'Founder, CutTheQ',
+      quote: "ProDone revolutionized our restaurant operations with their innovative queue management system. Before working with them, our customers were frustrated with long wait times. Now, they can order ahead and skip the queue entirely. The platform's real-time tracking and seamless payment integration have not only improved customer satisfaction but also increased our order volume by 30%. Their understanding of the food service industry and ability to deliver user-friendly solutions made all the difference.",
+    },
   ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 7000);
-
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
 
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
@@ -59,8 +51,8 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="section-padding bg-dark-950">
-      <div className="container-custom">
+    <section id="testimonials" className="py-20 bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           ref={ref}
@@ -73,7 +65,7 @@ const Testimonials = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-400 text-sm font-medium mb-6"
+            className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6"
           >
             Client Testimonials
           </motion.div>
@@ -82,9 +74,9 @@ const Testimonials = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6"
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 text-white"
           >
-            What Our <span className="gradient-text">Clients Say</span>
+            What Our <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Clients Say</span>
           </motion.h2>
           
           <motion.p
@@ -107,7 +99,7 @@ const Testimonials = () => {
           {/* Navigation Buttons - Outside */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-dark-800/80 hover:bg-dark-700/80 border border-dark-600 hover:border-primary-500/50 transition-all duration-300 z-10"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-gray-800/80 hover:bg-gray-700/80 border border-gray-600 hover:border-blue-500/50 transition-all duration-300 z-10"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-6 h-6 text-white" />
@@ -122,11 +114,11 @@ const Testimonials = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
                 transition={{ duration: 0.4 }}
-                className="card text-center relative p-8 bg-dark-800/50 backdrop-blur-sm rounded-2xl border border-dark-700/50 hover:border-primary-500/30 transition-all duration-300"
+                className="text-center relative p-8 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-blue-500/30 transition-all duration-300"
               >
                 {/* Quote Icon */}
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg">
                     <Quote className="w-5 h-5 text-white" />
                   </div>
                 </div>
@@ -138,9 +130,9 @@ const Testimonials = () => {
 
                 {/* Client Info */}
                 <div className="flex flex-col items-center">
-                  <div className="w-16 h-1 bg-gradient-to-r from-primary-500 to-transparent mb-4 rounded-full"></div>
+                  <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-transparent mb-4 rounded-full"></div>
                   <h4 className="text-xl font-semibold text-white">{testimonials[currentIndex].name}</h4>
-                  <p className="text-primary-400 text-sm font-medium">{testimonials[currentIndex].title}</p>
+                  <p className="text-blue-400 text-sm font-medium">{testimonials[currentIndex].title}</p>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -148,7 +140,7 @@ const Testimonials = () => {
 
           <button
             onClick={nextTestimonial}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-dark-800/80 hover:bg-dark-700/80 border border-dark-600 hover:border-primary-500/50 transition-all duration-300 z-10"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-gray-800/80 hover:bg-gray-700/80 border border-gray-600 hover:border-blue-500/50 transition-all duration-300 z-10"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-6 h-6 text-white" />
@@ -162,18 +154,16 @@ const Testimonials = () => {
                 onClick={() => goToTestimonial(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? 'bg-primary-500 scale-125'
-                    : 'bg-dark-600 hover:bg-dark-500'
+                    ? 'bg-blue-500 scale-125'
+                    : 'bg-gray-600 hover:bg-gray-500'
                 }`}
               />
             ))}
           </div>
         </motion.div>
-
-
       </div>
     </section>
   );
 };
 
-export default Testimonials; 
+export default Testimonials;
